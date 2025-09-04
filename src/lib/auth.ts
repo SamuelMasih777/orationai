@@ -1,6 +1,15 @@
-import { NextAuthOptions } from 'next-auth';
+import { type NextAuthOptions, type DefaultSession } from 'next-auth';
 import { DrizzleAdapter } from '@auth/drizzle-adapter';
 import { db } from '@/lib/db/index';
+
+// Extend the default Session type
+declare module 'next-auth' {
+  interface Session extends DefaultSession {
+    user: {
+      id: string;
+    } & DefaultSession['user'];
+  }
+}
 
 export const authOptions: NextAuthOptions = {
   adapter: DrizzleAdapter(db),
@@ -18,7 +27,7 @@ export const authOptions: NextAuthOptions = {
       return token;
     },
     async session({ session, token }) {
-      if (token) {
+      if (token?.id) {
         session.user.id = token.id as string;
       }
       return session;
