@@ -24,7 +24,7 @@ export default function ChatIndexPage() {
           Your AI-powered career counselor is here to help you navigate your professional journey. 
           Start a new conversation or continue from where you left off.
         </p>
-        <Button onClick={handleStartNewConversation} size="lg">
+        <Button onClick={handleStartNewConversation} size="lg" className='cursor-pointer'>
           Start New Conversation
         </Button>
       </Card>

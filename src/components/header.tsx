@@ -34,7 +34,7 @@ export function Header({ onNewChat, onToggleSidebar, sidebarOpen }: HeaderProps)
             variant="ghost"
             size="icon"
             onClick={onToggleSidebar}
-            className="md:hidden"
+            className="cursor-pointer md:hidden"
           >
             <Menu className="h-4 w-4" />
           </Button>
@@ -47,7 +47,7 @@ export function Header({ onNewChat, onToggleSidebar, sidebarOpen }: HeaderProps)
             variant="outline" 
             size="sm" 
             onClick={onNewChat}
-            className="hidden sm:flex"
+            className="cursor-pointer hidden sm:flex"
           >
             New Chat
           </Button>
@@ -55,14 +55,14 @@ export function Header({ onNewChat, onToggleSidebar, sidebarOpen }: HeaderProps)
             variant="outline" 
             size="icon" 
             onClick={onNewChat}
-            className="sm:hidden"
+            className="cursor-pointer sm:hidden"
           >
             <Bot className="h-4 w-4" />
           </Button>
           <ThemeToggle />
           <DropdownMenu>
             <DropdownMenuTrigger asChild>
-              <Button variant="ghost" size="icon">
+              <Button variant="ghost" size="icon" className='cursor-pointer'>
                 <Avatar className="h-8 w-8">
                   <AvatarFallback>
                     <User className="h-4 w-4" />

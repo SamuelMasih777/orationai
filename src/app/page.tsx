@@ -9,14 +9,14 @@ import { MessageSquare, Bot, Users, Target } from 'lucide-react';
 export default function Home() {
   const router = useRouter();
 
-  useEffect(() => {
-    // Redirect to signup page after a short delay
-    const timer = setTimeout(() => {
-      router.push('/auth/signup');
-    }, 3000);
+  // useEffect(() => {
+  //   // Redirect to signup page after a short delay
+  //   const timer = setTimeout(() => {
+  //     router.push('/auth/signup');
+  //   }, 3000);
 
-    return () => clearTimeout(timer);
-  }, [router]);
+  //   return () => clearTimeout(timer);
+  // }, [router]);
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-blue-50 to-indigo-100 dark:from-gray-900 dark:to-gray-800 flex items-center justify-center p-4">
@@ -67,13 +67,13 @@ export default function Home() {
           <Button 
             size="lg" 
             onClick={() => router.push('/auth/signup')}
-            className="bg-blue-600 hover:bg-blue-700 text-white px-8 py-3 text-lg"
+            className="cursor-pointer bg-blue-600 hover:bg-blue-700 text-white px-8 py-3 text-lg"
           >
-            Start Your Career Journey
+            Click here and Start Your Career Journey
           </Button>
-          <p className="text-sm text-gray-500 dark:text-gray-400 mt-4">
+          {/* <p className="text-sm text-gray-500 dark:text-gray-400 mt-4">
             Redirecting to signup in a few seconds...
-          </p>
+          </p> */}
         </div>
       </div>
     </div>

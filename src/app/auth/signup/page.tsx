@@ -118,7 +118,7 @@ export default function SignupPage() {
 
           <Button
             type="submit"
-            className="w-full"
+            className="cursor-pointer w-full"
             disabled={isLoading}
           >
             {isLoading ? 'Creating Account...' : 'Create Account'}
@@ -130,7 +130,7 @@ export default function SignupPage() {
             Already have an account?{' '}
             <button
               onClick={() => router.push('/auth/signin')}
-              className="text-blue-600 hover:text-blue-500 font-medium"
+              className="cursor-pointer text-blue-600 hover:text-blue-500 font-medium"
             >
               Sign in
             </button>

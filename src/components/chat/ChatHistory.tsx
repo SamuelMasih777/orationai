@@ -83,7 +83,7 @@ export function ChatHistory({ userId, currentSessionId, onSessionSelect, onNewSe
     <div className="h-screen flex flex-col">
       {/* Header */}
       <div className="p-4 border-b flex-shrink-0">
-        <Button onClick={handleNewSession} className="w-full" size="sm">
+        <Button onClick={handleNewSession} className="w-full cursor-pointer" size="sm">
           <Plus className="h-4 w-4 mr-2" />
           New Chat
         </Button>
